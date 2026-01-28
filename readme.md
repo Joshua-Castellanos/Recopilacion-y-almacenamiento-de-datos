@@ -1,60 +1,60 @@
-# Zuber: Análisis de Viajes en Chicago
+# Zuber: Chicago Trip Analysis
 
-Este proyecto practicum consiste en un análisis de datos para **Zuber**, una nueva empresa de viajes compartidos que se lanza en Chicago. El objetivo principal es comprender las preferencias de los pasajeros y el impacto de factores externos, como el clima, en los viajes.
+This practicum project consists of a data analysis for **Zuber**, a new ride-sharing company launching in Chicago. The main objective is to understand passenger preferences and the impact of external factors, such as weather, on trips.
 
-## 🎯 Objetivos del Proyecto
+## 🎯 Project Objectives
 
-*   Identificar las 10 empresas de taxis con mayor número de viajes en Chicago.
-*   Determinar los barrios más populares como destinos finales de viajes.
-*   Probar la hipótesis de que la duración promedio de los viajes desde el Loop hasta el Aeropuerto Internacional O'Hare cambia en los sábados lluviosos.
+*   Identify the top 10 taxi companies with the highest number of trips in Chicago.
+*   Determine the most popular neighborhoods as final trip destinations.
+*   Test the hypothesis that the average duration of trips from the Loop to O'Hare International Airport changes on rainy Saturdays.
 
-## 📊 Descripción de los Datasets
+## 📊 Dataset Descriptions
 
-El proyecto utiliza tres conjuntos de datos principales:
+The project uses three main datasets:
 
 1.  **`project_sql_result_01.csv`**:
-    *   `company_name`: nombre de la empresa de taxis.
-    *   `trips_amount`: el número de viajes para cada empresa de taxis el 15 y 16 de noviembre de 2017.
+    *   `company_name`: name of the taxi company.
+    *   `trips_amount`: number of trips for each taxi company on November 15-16, 2017.
 2.  **`project_sql_result_04.csv`**:
-    *   `dropoff_location_name`: barrios de Chicago donde finalizaron los viajes.
-    *   `average_trips`: el promedio de viajes que terminaron en cada barrio en noviembre de 2017.
-3.  **`project_sql_result_07.csv`**: Datos sobre viajes desde el Loop hasta el Aeropuerto O'Hare.
-    *   `start_ts`: fecha y hora de la recogida.
-    *   `weather_conditions`: condiciones climáticas en el momento en el que comenzó el viaje.
-    *   `duration_seconds`: duración del viaje en segundos.
+    *   `dropoff_location_name`: Chicago neighborhoods where trips ended.
+    *   `average_trips`: average number of trips that ended in each neighborhood in November 2017.
+3.  **`project_sql_result_07.csv`**: Data on trips from the Loop to O'Hare Airport.
+    *   `start_ts`: pickup date and time.
+    *   `weather_conditions`: weather conditions at the time the trip started.
+    *   `duration_seconds`: trip duration in seconds.
 
-## 🛠️ Herramientas Utilizadas
+## 🛠️ Tools Used
 
 *   **Python 3**
-*   **Pandas**: Para la manipulación y limpieza de datos.
-*   **Matplotlib & Seaborn**: Para la creación de visualizaciones estéticas e informativas.
-*   **Scipy**: Específicamente el módulo `stats` para realizar pruebas de hipótesis estadísticas.
+*   **Pandas**: For data manipulation and cleaning.
+*   **Matplotlib & Seaborn**: For creating aesthetic and informative visualizations.
+*   **Scipy**: Specifically the `stats` module for performing statistical hypothesis tests.
 
-## 🚀 Flujo de Trabajo
+## 🚀 Workflow
 
-### 1. Análisis Exploratorio de Datos (EDA)
-Se analizaron los datos de las empresas y barrios para identificar patrones de demanda.
-*   Se identificó a **Flash Cab** como la empresa líder con una diferencia significativa sobre la competencia.
-*   El barrio **Loop** resultó ser el destino más frecuente, seguido de River North y Streeterville.
+### 1. Exploratory Data Analysis (EDA)
+Company and neighborhood data were analyzed to identify demand patterns.
+*   **Flash Cab** was identified as the leading company with a significant lead over the competition.
+*   The **Loop** neighborhood was the most frequent destination, followed by River North and Streeterville.
 
-### 2. Visualización de Datos
-Se crearon gráficos de barras para representar visualmente el Top 10 de empresas por cantidad de viajes y el Top 10 de barrios por promedio de llegadas.
+### 2. Data Visualization
+Bar charts were created to visually represent the Top 10 companies by trip count and the Top 10 neighborhoods by average arrivals.
 
-### 3. Prueba de Hipótesis
-Se realizó una prueba t de Student independiente para comparar la duración de los viajes en diferentes condiciones climáticas.
-*   **Hipótesis Nula (H₀)**: La duración promedio de los viajes desde el Loop hasta el Aeropuerto Internacional O'Hare es la misma en los sábados lluviosos que en los sábados de buen clima.
-*   **Hipótesis Alternativa (H₁)**: La duración promedio de los viajes difiere según las condiciones climáticas.
+### 3. Hypothesis Testing
+An independent Student's t-test was performed to compare trip durations under different weather conditions.
+*   **Null Hypothesis (H₀)**: The average duration of trips from the Loop to O'Hare International Airport is the same on rainy Saturdays as on sunny Saturdays.
+*   **Alternative Hypothesis (H₁)**: The average duration of trips differs based on weather conditions.
 
-## 💡 Conclusiones Principales
+## 💡 Key Conclusions
 
-1.  **Dominio de Mercado**: Flash Cab domina el mercado de taxis en Chicago durante el periodo analizado.
-2.  **Concentración Urbana**: La actividad de viajes se concentra fuertemente en el centro financiero y turístico (Loop, River North).
-3.  **Impacto del Clima**: Se rechazó la hipótesis nula, concluyendo que **el clima lluvioso aumenta significativamente la duración de los viajes**, probablemente debido al tráfico y las condiciones de la carretera.
+1.  **Market Dominance**: Flash Cab dominates the Chicago taxi market during the analyzed period.
+2.  **Urban Concentration**: Trip activity is heavily concentrated in the financial and tourist center (Loop, River North).
+3.  **Weather Impact**: The null hypothesis was rejected, concluding that **rainy weather significantly increases trip duration**, likely due to traffic and road conditions.
 
-## ⚙️ Cómo Ejecutar
-1. Clone este repositorio.
-2. Asegúrese de tener instaladas las dependencias: `pip install pandas matplotlib seaborn scipy`.
-3. Ejecute el notebook `Recopilacion y Almacenamiento de Datos.ipynb` en un entorno de Jupyter.
+## ⚙️ How to Run
+1. Clone this repository.
+2. Ensure you have the dependencies installed: `pip install pandas matplotlib seaborn scipy`.
+3. Run the notebook `Chicago_Trip_Analysis.ipynb` in a Jupyter environment.
 
 ---
-*Proyecto desarrollado como parte del bootcamp de análisis de datos de TripleTen.*
+*Project developed as part of the TripleTen data analysis bootcamp.*
